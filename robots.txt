@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://caminhosdalapategra.com.br/sitemap.xml

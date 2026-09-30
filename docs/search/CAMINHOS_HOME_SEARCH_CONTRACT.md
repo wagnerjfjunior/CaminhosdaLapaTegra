@@ -62,6 +62,42 @@ H1:
 The page should explain the hierarchy naturally:
 Lapa -> Vila Anastácio -> Caminhos da Lapa -> individual condominiums/projects.
 
+The home also preserves existing brand-query authority for:
+- `caminhos da lapa tegra`
+- `tegra caminhos da lapa`
+- `tegra lapa`
+
+This is supported with factual realization/construction context rather than stuffing the title with brand variants.
+
+## IA
+
+Primary home anchors:
+- `#empreendimentos`
+- `#rua-jardim`
+- `#vila-anastacio`
+- `#oportunidades`
+- `#contato`
+
+Child-page headers return users to these home sections instead of listing duplicated project names.
+
+## FAQ / entity coverage
+
+The home includes visible FAQ and matching FAQPage schema for:
+- what Caminhos da Lapa is;
+- Lapa vs Vila Anastácio geographic framing;
+- project set;
+- Rua Jardim;
+- current/private opportunities;
+- realization/construction participants.
+
+Visible and structured FAQ must remain semantically aligned.
+
+## Lead flow
+
+Home uses Form 46 / tenant 313 and production-only POST behavior aligned with child pages.
+Local preview must not create leads.
+Production behavior is IMPLEMENTED, not production-validated until tested on the production hostname.
+
 ## Internal linking
 
 The home links to each durable constituent page and to current commercial opportunities when contextually useful.

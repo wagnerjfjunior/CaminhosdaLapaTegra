@@ -1,0 +1,92 @@
+name: SFJM canonical CI
+
+on:
+  workflow_dispatch:
+  pull_request:
+  push:
+    branches: [main]
+
+permissions:
+  contents: read
+
+jobs:
+  validate:
+    name: Validate Caminhos canonical routing
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - name: Checkout exact pull request head
+        if: ${{ github.event_name == 'pull_request' }}
+        uses: actions/checkout@v4
+        with:
+          ref: ${{ github.event.pull_request.head.sha }}
+
+      - name: Checkout exact non-PR revision
+        if: ${{ github.event_name != 'pull_request' }}
+        uses: actions/checkout@v4
+
+      - name: Validate production routing contract
+        shell: python
+        run: |
+          import json
+          import pathlib
+          import xml.etree.ElementTree as ET
+
+          root = pathlib.Path(".")
+          config = json.loads((root / "vercel.json").read_text(encoding="utf-8"))
+
+          assert config.get("trailingSlash") is True, "vercel.json must enforce trailingSlash=true"
+
+          deployment = config.get("git", {}).get("deploymentEnabled", {})
+          assert deployment.get("main") is True, "main production deployment must remain enabled"
+          assert deployment.get("**") is False, "non-main deployments must remain disabled"
+
+          expected = {
+              "/jerivas": "/jerivas/",
+              "/home-club": "/home-club/",
+              "/elo": "/elo/",
+              "/eloduo": "/eloduo/",
+              "/reserva": "/reserva/",
+          }
+          redirects = {
+              item.get("source"): item
+              for item in config.get("redirects", [])
+              if isinstance(item, dict)
+          }
+
+          for source, destination in expected.items():
+              rule = redirects.get(source)
+              assert rule is not None, f"missing canonical redirect for {source}"
+              assert rule.get("destination") == destination, (
+                  f"{source} must redirect to {destination}"
+              )
+              assert rule.get("permanent") is True, (
+                  f"{source} redirect must be permanent"
+              )
+
+          canonical_urls = {
+              "https://www.caminhosdalapategra.com.br/",
+              "https://www.caminhosdalapategra.com.br/jerivas/",
+              "https://www.caminhosdalapategra.com.br/home-club/",
+              "https://www.caminhosdalapategra.com.br/elo/",
+              "https://www.caminhosdalapategra.com.br/eloduo/",
+              "https://www.caminhosdalapategra.com.br/reserva/",
+          }
+
+          ns = {"sm": "http://www.sitemaps.org/schemas/sitemap/0.9"}
+          tree = ET.parse(root / "sitemap.xml")
+          sitemap_urls = {
+              loc.text.strip()
+              for loc in tree.findall(".//sm:loc", ns)
+              if loc.text
+          }
+          assert canonical_urls.issubset(sitemap_urls), (
+              "sitemap.xml must contain all canonical slash URLs"
+          )
+
+          for directory in ("jerivas", "home-club", "elo", "eloduo", "reserva"):
+              assert (root / directory / "index.html").is_file(), (
+                  f"missing public document: {directory}/index.html"
+              )
+
+          print("Caminhos canonical routing contract: PASS")

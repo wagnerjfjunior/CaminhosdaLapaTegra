@@ -1,0 +1,70 @@
+framework:
+  id: RESF
+  version: 1
+  lifecycle_at_adoption: CANDIDATE
+  provider: wagnerjfjunior/Blogs-sites-portais-seo
+  provider_ref: 4b10e63179acc17572c96aafe679dadd2b9d6c79
+
+consumer:
+  project_id: caminhosdalapategra
+  repository: wagnerjfjunior/CaminhosdaLapaTegra
+  adoption_authority: Wagner
+  adoption_date: 2026-09-30
+
+applicability:
+  domain: real_estate
+  project_type: durable_master_development_and_constituent_property
+  status: APPLICABLE
+
+adoption:
+  mode: SELECTIVE
+  modules:
+    - RESF-INTELLIGENCE
+    - RESF-PRODUCT-TRUTH
+    - RESF-IA
+    - RESF-SEARCH-CONTRACT
+    - RESF-SEO
+    - RESF-CONTENT
+    - RESF-SCHEMA
+    - RESF-GEO-AEO
+    - RESF-LINKING
+    - RESF-UX
+    - RESF-PERFORMANCE
+    - RESF-CONVERSION
+    - RESF-TRACKING
+    - RESF-LEAD
+    - RESF-CRM
+    - RESF-CONSENT
+    - RESF-QA
+    - RESF-OBSERVABILITY
+
+overrides:
+  - id: lifecycle-commercial-role
+    rule: durable constituent pages may carry qualified consultation CTAs without claiming current developer inventory; availability must be confirmed in atendimento
+    authority: Wagner
+  - id: sibling-commercial-owner
+    rule: Elo Duo and Reserva keep durable Caminhos pages while MoreNumTegra may keep separate commercial pages with distinct search intent and copy
+    authority: Wagner
+
+deferred_modules:
+  - RESF-ATTRIBUTION
+  - RESF-PAID
+
+rejected_modules: []
+
+consumer_facts_source:
+  primary:
+    - current official Tegra project pages
+    - current consumer repository
+    - Product Authority decisions
+  historical:
+    - existing caminhosdalapategra.com.br Green pages
+  search:
+    - Search Console evidence receipt in wagnerjfjunior/Blogs-sites-portais-seo
+runtime_authority: CONSUMER
+
+known_gaps:
+  - production DNS and domain cutover remain outside this branch
+  - production tracking destination must be validated before cutover
+  - Green CRM submission must be validated without creating unintended live leads
+  - local media derivatives still need performance measurement before release

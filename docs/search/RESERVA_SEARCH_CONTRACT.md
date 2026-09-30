@@ -5,7 +5,7 @@ Scope: `/reserva/`
 
 ## Primary owner
 
-`https://caminhosdalapategra.com.br/reserva/` is the durable entity/search owner for Reserva inside Caminhos da Lapa.
+`https://www.caminhosdalapategra.com.br/reserva/` is the durable entity/search owner for Reserva inside Caminhos da Lapa.
 
 Primary intent:
 - understand Reserva Caminhos da Lapa;
@@ -64,7 +64,7 @@ H1:
 
 ## Canonical
 
-`https://caminhosdalapategra.com.br/reserva/`
+`https://www.caminhosdalapategra.com.br/reserva/`
 
 No doorway variants.
 

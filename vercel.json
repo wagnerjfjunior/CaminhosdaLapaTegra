@@ -8,6 +8,33 @@
     }
   },
   "ignoreCommand": "if git diff --name-only HEAD^ HEAD | grep -Ev '^(docs/|handoffs/|bootstrap/|\\.github/|README\\.md$)' | grep -q .; then exit 1; else exit 0; fi",
+  "redirects": [
+    {
+      "source": "/jerivas",
+      "destination": "/jerivas/",
+      "permanent": true
+    },
+    {
+      "source": "/home-club",
+      "destination": "/home-club/",
+      "permanent": true
+    },
+    {
+      "source": "/elo",
+      "destination": "/elo/",
+      "permanent": true
+    },
+    {
+      "source": "/eloduo",
+      "destination": "/eloduo/",
+      "permanent": true
+    },
+    {
+      "source": "/reserva",
+      "destination": "/reserva/",
+      "permanent": true
+    }
+  ],
   "headers": [
     {
       "source": "/favicon.ico",

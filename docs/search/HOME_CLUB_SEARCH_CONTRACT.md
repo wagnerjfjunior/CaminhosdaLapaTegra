@@ -5,7 +5,7 @@ Scope: `/home-club/`
 
 ## Primary owner
 
-`https://caminhosdalapategra.com.br/home-club/` is the durable entity/search owner for Home Club inside Caminhos da Lapa.
+`https://www.caminhosdalapategra.com.br/home-club/` is the durable entity/search owner for Home Club inside Caminhos da Lapa.
 
 Primary intent:
 - understand Home Club Caminhos da Lapa;
@@ -61,7 +61,7 @@ H1:
 
 ## Canonical
 
-`https://caminhosdalapategra.com.br/home-club/`
+`https://www.caminhosdalapategra.com.br/home-club/`
 
 No doorway variants.
 

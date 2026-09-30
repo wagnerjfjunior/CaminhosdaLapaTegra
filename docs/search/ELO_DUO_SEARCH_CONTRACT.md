@@ -5,7 +5,7 @@ Scope: `/eloduo/`
 
 ## Primary owner
 
-`https://caminhosdalapategra.com.br/eloduo/` is the durable entity/search owner for ELO DUO Caminhos da Lapa.
+`https://www.caminhosdalapategra.com.br/eloduo/` is the durable entity/search owner for ELO DUO Caminhos da Lapa.
 
 Primary intent:
 - understand ELO DUO Caminhos da Lapa;
@@ -90,7 +90,7 @@ H1:
 
 ## Canonical
 
-`https://caminhosdalapategra.com.br/eloduo/`
+`https://www.caminhosdalapategra.com.br/eloduo/`
 
 No merge/canonical to ELO.
 

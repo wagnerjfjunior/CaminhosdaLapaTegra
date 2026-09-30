@@ -5,7 +5,7 @@ Scope: `/elo/`
 
 ## Primary owner
 
-`https://caminhosdalapategra.com.br/elo/` is the durable entity/search owner for ELO Caminhos da Lapa.
+`https://www.caminhosdalapategra.com.br/elo/` is the durable entity/search owner for ELO Caminhos da Lapa.
 
 Primary intent:
 - understand ELO Caminhos da Lapa;
@@ -78,7 +78,7 @@ The current official Tegra page states a commercial area range of 47 m² to 68 m
 
 ## Canonical
 
-`https://caminhosdalapategra.com.br/elo/`
+`https://www.caminhosdalapategra.com.br/elo/`
 
 No doorway variants.
 

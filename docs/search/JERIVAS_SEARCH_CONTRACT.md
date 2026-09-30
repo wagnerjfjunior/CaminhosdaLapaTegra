@@ -7,7 +7,7 @@ Framework: RESF v1 — C03 Search Contract + C04 IA + C05 Page + C06 Content + C
 
 ## Primary owner
 
-`https://caminhosdalapategra.com.br/jerivas/` is the durable entity/search owner for Jerivás inside Caminhos da Lapa.
+`https://www.caminhosdalapategra.com.br/jerivas/` is the durable entity/search owner for Jerivás inside Caminhos da Lapa.
 
 Primary intent:
 - understand the Jerivás condominium;
@@ -107,7 +107,7 @@ Forbidden:
 ## Canonical / URL
 
 Canonical:
-`https://caminhosdalapategra.com.br/jerivas/`
+`https://www.caminhosdalapategra.com.br/jerivas/`
 
 Preserve route:
 `/jerivas/`

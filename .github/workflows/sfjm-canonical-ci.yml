@@ -90,3 +90,6 @@ jobs:
               )
 
           print("Caminhos canonical routing contract: PASS")
+
+      - name: Validate canonical JSON-LD graph
+        run: node scripts/validate-schema-graph.mjs

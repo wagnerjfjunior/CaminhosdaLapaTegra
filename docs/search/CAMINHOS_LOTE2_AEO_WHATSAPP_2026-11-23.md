@@ -40,6 +40,12 @@ Concluir a coerência visual do botão de WhatsApp entre a home e as cinco pági
 - Cada botão flutuante utiliza logotipo, `data-placement="floating"` e rótulo acessível.
 - Preservados URLs e scripts comerciais; ausência de edição MoreNumTegra.
 
+## Correção de gate sitemap
+
+- O check `Sitemap lastmod` detectou cinco páginas alteradas com `<lastmod>2026-11-14</lastmod>`.
+- `sitemap.xml` foi atualizado **somente nas cinco URLs** para `2026-11-23`, data dos commits desta branch, respeitando o validador canônico; nenhuma regra/CI foi relaxada.
+- Reexecutar o workflow sobre o novo head e confirmar status final antes de merge.
+
 ## Gates restantes
 
 1. CI canônico / sitemap do head final.

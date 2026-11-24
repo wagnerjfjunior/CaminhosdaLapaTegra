@@ -96,3 +96,6 @@ jobs:
 
       - name: Validate homepage entity hub schema
         run: node scripts/validate-home-hub-schema.mjs
+
+      - name: Validate independent homepage local business schema
+        run: node scripts/validate-home-localbusiness-schema.mjs

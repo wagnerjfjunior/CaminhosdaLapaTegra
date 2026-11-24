@@ -93,3 +93,6 @@ jobs:
 
       - name: Validate FAQPage JSON-LD mirrors the visible FAQs
         run: node scripts/validate-faq-jsonld.mjs
+
+      - name: Validate homepage entity hub schema
+        run: node scripts/validate-home-hub-schema.mjs

@@ -28,7 +28,8 @@ for(const type of ["Organization","Person","Service","ContactPoint","FAQPage","W
 const person=find("Person")[0],contact=find("ContactPoint")[0],service=find("Service")[0];
 assert.equal(person.identifier.value,"209.905-F");
 assert.equal(contact.telephone,"+5511960779328");
-assert.deepEqual(service.provider,{"@id":person["@id"]});
+assert.deepEqual(service.provider,{"@id":origin+"#sabrina-real-estate-agent"});
+assert.deepEqual(service.broker,{"@id":person["@id"]});
 assert.deepEqual(person.worksFor,{"@id":find("Organization")[0]["@id"]});
 assert.ok(h.includes("CRECI-SP 209.905-F"),"CRECI not visible");
 assert.ok(h.includes("96077-9328"),"contact not visible");

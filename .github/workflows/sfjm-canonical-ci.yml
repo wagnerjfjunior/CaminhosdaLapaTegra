@@ -90,3 +90,6 @@ jobs:
               )
 
           print("Caminhos canonical routing contract: PASS")
+
+      - name: Validate FAQPage JSON-LD mirrors the visible FAQs
+        run: node scripts/validate-faq-jsonld.mjs

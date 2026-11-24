@@ -28,7 +28,7 @@ Perguntas adicionadas são **hipóteses editoriais** com entidades/intent susten
 - `/jerivas/`: novo H2 **Como encontrar um apartamento no Jerivás de 105 ou 136 m²?**; resposta direta informa estado histórico, mercado particular sob confirmação, e continua o handoff aos cards Nova Vivere/Garden Design.
 - `/home-club/`: novo H2 **Como consultar um apartamento de 62 ou 79 m² no Home Club?**; resposta direta para estoque particular sujeito à verificação, com a mesma vitrine comercial.
 - `/jerivas/`: correção tipográfica do FAQ `Na na região` → `Na região`, sem modificar sentido.
-- `sitemap.xml`: `<lastmod>` de ambas as páginas atualizado para a data dos commits, sem tocar nas outras URLs.
+- `sitemap.xml`: ambas as URLs já estavam com `<lastmod>2026-11-23</lastmod>` na `main` após a PR #13; não houve diferença de conteúdo no sitemap desta PR. A validação do head deve confirmar que a data não ficou anterior ao último commit das páginas.
 
 Preservados H1, title, canonical, robots, FAQ question count, JSON-LD, identidade gráfica, galerias, imagens, CTA, WhatsApp, formulário Greenn 46, medição e links existentes. Nenhum preço/unidade/endereço foi inventado. **MoreNumTegra não foi modificado.**
 
